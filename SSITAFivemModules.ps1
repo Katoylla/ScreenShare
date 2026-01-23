@@ -6,7 +6,7 @@ if($processi){
     $moduli=$processi.Modules|Sort-Object {$_.FileName.ToLower()};#order by filename but still have all info
 
     #Extracting dlls
-    $dlls=(Invoke-RestMethod "https://raw.githubusercontent.com/Katoylla/ScreenShare/main/dllsus.txt") -split "\n";
+    $dlls=(Invoke-RestMethod "https://raw.githubusercontent.com/ScreenShareITA/ScreenShare/main/dllsus.txt") -split "\n";
     if(!$dlls){
         Write-Host -ForegroundColor Red "Failed to retrieve legit dlls list or splitting them by lines :(";
     }else{
